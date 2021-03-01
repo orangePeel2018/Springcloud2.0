@@ -84,4 +84,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!-- 这是spring boot devtool plugin 热部署1常用-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                <!--fork :  如果没有该项配置，这个devtools不会起作用，即应用不会restart -->
+                    <fork>true</fork>
+                 </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
