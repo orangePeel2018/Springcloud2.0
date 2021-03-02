@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * 提取的公共类，放到工具模块，别的模块需要使用，只需要引入此模块的依赖
  * 一般来说，返回前端的应该都是json格式，所以定义此工具类作为返回
  * 有错误码，描述信息和数据
  * @param <T>

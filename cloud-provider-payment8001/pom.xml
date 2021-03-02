@@ -53,5 +53,11 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        <!--    提取的公共类，放到工具模块，别的模块需要使用，只需要引入此模块的依赖    -->
+        <dependency>
+            <groupId>com.fys.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>
