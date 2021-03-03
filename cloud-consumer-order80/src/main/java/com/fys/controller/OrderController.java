@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 public class OrderController {
 
     //设置支付服务模块的url
-    public static final String PAYENT_URL="http://localhost:8001";
+    public static final String PAYENT_URL="http://CLOUD-PAYMENT-SERVICE";
 
     @Resource
     private RestTemplate restTemplate;
