@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8006
 
 spring:
   application:
@@ -10,16 +10,14 @@ spring:
     url: jdbc:mysql://localhost:3306/db2020_cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: fys440184
-
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
-  instance:
-    instance-id: payment8001
-    prefer-ip-address: true
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        instance-id: payment8006
+        prefer-ip-address: true
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
