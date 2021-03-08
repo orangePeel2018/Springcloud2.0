@@ -15,4 +15,4 @@ eureka:
       #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地方;
       defaultZone: http://eureka7002.com:7002/eureka/
   server:
-    enable-self-preservation: false
+    enable-self-preservation: true
