@@ -23,4 +23,6 @@ public interface PaymentDao {
      * @return 实例对象
      */
      Payment queryById(Long id);
+
+
 }

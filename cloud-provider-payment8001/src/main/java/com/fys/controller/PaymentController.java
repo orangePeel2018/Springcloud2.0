@@ -26,6 +26,7 @@ public class PaymentController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+
     @PostMapping(value = "/payment/create")
     public CommonResult<Payment> create(@RequestBody Payment payment){
        Payment insert =  paymentService.insert(payment);
@@ -39,13 +40,13 @@ public class PaymentController {
 
 
     @GetMapping(value = "/payment/selectOne/{id}")
-    public CommonResult<Payment> selectOne(@PathVariable("id") Long id){
-        Payment payment =  paymentService.queryById(id);
-        log.info("*******查询结果："+payment);
-        if(payment==null){
-            return new CommonResult(404,"select error,serverPort:"+servicePort ,null);
-        }else{
-            return new CommonResult(200,"select success,serverPort:"+servicePort ,payment);
+    public CommonResult<Payment> selectOne(@PathVariable("id") Long id) {
+        Payment payment = paymentService.queryById(id);
+        log.info("*******查询结果：" + payment);
+        if (payment == null) {
+            return new CommonResult(404, "select error,serverPort:" + servicePort, null);
+        } else {
+            return new CommonResult(200, "select success,serverPort:" + servicePort, payment);
         }
     }
 
